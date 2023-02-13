@@ -1,8 +1,12 @@
 /* 
+Citation for setting up socket
+Date: 02/13/2023
+Adapted from ZeroMQ.org
+Source URL: https://zeromq.org/get-started/?language=nodejs#
+
 Client is for testing purposes.
-Server for company search uses ZeroMQ.
-As such, this test client is written in Node.JS using ZeroMQ.
-Install the ZeroMQ package: npm install zeromq@6.0.0-beta.16
+This test client is written using Node.js and ZeroMQ.
+To install the ZeroMQ package, run the following: npm install zeromq@6.0.0-beta.16
 */
 
 async function runCompanySearch() {
@@ -17,8 +21,7 @@ async function runCompanySearch() {
     const socket = new zmq.Request();
     socket.connect(PORT);
 
-    // Variable to hold message sent to the server
-    // Example used here is to receive data on a clown company called "Starlights"
+    // Variable to hold message sent to the server. Example used here is to receive data on a clown company called "Starlights"
     let userInput = "Starlights";
 
     console.log("Sending", userInput);

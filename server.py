@@ -1,3 +1,8 @@
+# Citation for setting up socket
+# Date: 02/13/2023
+# Adapted from ZeroMQ.org
+# Source URL: https://zeromq.org/get-started/?language=python#
+
 import zmq
 import pandas as pd
 import json
