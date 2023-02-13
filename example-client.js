@@ -19,7 +19,7 @@ async function runCompanySearch() {
 
     // Variable to hold message sent to the server
     // Example used here is to receive data on a clown company called "Starlights"
-    let userInput = "Starlights";
+    let userInput = "";
 
     console.log("Sending", userInput);
     await socket.send(userInput);
@@ -28,12 +28,12 @@ async function runCompanySearch() {
     const result_string = result.toString();
 
     try {
-        console.log("Received: ", result_string);
         const result_JSON = JSON.parse(result_string)
+        console.log("Received: ", result_JSON);
 
         /* 
         Example on how to extract info from JSON:
-            let price = result_JSON["Price"];
+            let price = result_JSON["price"];
             console.log(price);
         */
 
