@@ -9,6 +9,10 @@ This project is a microservice that returns information on clown companies in an
 * Setting up server side socket
     * Download all files in the repo.
     * Open folder in your IDE of choice (VSCode, etc.).
+    * To install the necessary packages, run the following command in the terminal:
+        ```
+        npm install zeromq@6.0.0-beta.16
+        ```
     * To start server, use the following command in the terminal:
         ```
         python server.py
@@ -24,12 +28,8 @@ This project is a microservice that returns information on clown companies in an
         const socket = new zmq.Request();
         socket.connect('tcp://localhost:3000');
         ```
-    * To install the necessary packages, run the following command in the terminal:
-        ```
-        npm install zeromq@6.0.0-beta.16
-        ```
 * REQUEST Data
-    * An app can request data from the microservice by using the socket and calling `send()`
+    * The app can request data from the microservice by using the socket and calling `send()`
         ```
         await socket.send(request_string);
         ```
