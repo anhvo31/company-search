@@ -2,6 +2,7 @@ import zmq
 import pandas as pd
 import json
 import time
+import sys
 
 
 PORT = "tcp://*:3000"
@@ -38,7 +39,7 @@ while True:
         continue
     except KeyboardInterrupt:
         print("Closing socket...")
-        break
+        sys.exit(0)
     else:
         # Extracts data about the company
         name = df['Company Name'][index]
@@ -46,9 +47,8 @@ while True:
         min_hours = df['Min Hours'][index]
         max_hours = df['Max Hours'][index]
 
-        # Appends data to dictionary object
         result = {"Name": f"{name}", "Price": f"{price}", "Min Hours": f"{min_hours}", "Max Hours": f"{max_hours}"}
 
-        # Sends dictionary as JSON reply back to client
+        # Sends dictionary as JSON reply to client
         print(f"Sending: {result}")
         socket.send_json(result)
