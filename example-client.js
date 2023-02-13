@@ -19,7 +19,7 @@ async function runCompanySearch() {
 
     // Variable to hold message sent to the server
     // Example used here is to receive data on a clown company called "Starlights"
-    let userInput = "";
+    let userInput = "Starlights";
 
     console.log("Sending", userInput);
     await socket.send(userInput);
