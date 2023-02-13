@@ -49,10 +49,10 @@ This project is a microservice that returns information on clown companies in an
     * Example:
         ```
         {
-            "Name": "Starlights", 
-            "Price": "55", 
-            "Min Hours": "2", 
-            "Max Hours": "8"
+            "name": "Starlights", 
+            "price": "55", 
+            "minHours": "2", 
+            "maxHours": "8"
         }
         ```
 * UML Sequence Diagram
