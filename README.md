@@ -55,6 +55,9 @@ This project is a microservice that returns information on clown companies in an
             "Max Hours": "8"
         }
         ```
+* UML Sequence Diagram
+
+    ![UML Sequence Diagram](https://github.com/anhvo31/company-search/blob/main/sequence_diagram.jpg)
 
 ## Resources
 * Having trouble setting up the client side socket? Refer to the file `example-client.js` for examples and comments on how to fully set one up.
